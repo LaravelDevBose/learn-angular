@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import {BasisHighlightDirective} from './directive/basis-highlight.directive';
 import { RendererDirectiveDirective } from './directive/renderer-directive.directive';
 import { HostListenerDirectiveDirective } from './directive/host-listener-directive.directive';
+import { HostBindingDirectiveDirective } from './directive/host-binding-directive.directive';
 
 @NgModule({
   declarations: [
@@ -12,6 +13,7 @@ import { HostListenerDirectiveDirective } from './directive/host-listener-direct
     BasisHighlightDirective,
     RendererDirectiveDirective,
     HostListenerDirectiveDirective,
+    HostBindingDirectiveDirective,
   ],
   imports: [
     BrowserModule
