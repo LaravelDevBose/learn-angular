@@ -1,36 +1,17 @@
+
 <div class="container">
   <div class="row">
-    <div class="col-xs-12">
-      <button
-        class="btn btn-primary"
-        (click)="onlyOdd = !onlyOdd">Only show odd numbers</button>
-      <br><br>
-      <ul class="list-group">
-        <div *ngIf="onlyOdd">
-          <li
-            class="list-group-item"
-            *ngFor="let odd of oddNumbers"
-            [ngClass]="{odd: odd % 2 !== 0}"
-            [ngStyle]="{backgroundColor: odd % 2 !==0 ? 'yellow': 'green'}"
-          >
-            {{ odd }}
-          </li>
-        </div>
-        <div *ngIf="!onlyOdd">
-          <li
-            class="list-group-item"
-            *ngFor="let even of evenNumbers"
-            [ngClass]="{odd: even % 2 !== 0}"
-            [ngStyle]="{backgroundColor: even % 2 !==0 ? 'yellow': 'green'}"
-          >
-            {{ even }}
-          </li>
-        </div>
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="#">Home</a></li>
+        <li role="presentation"><a href="#">Servers</a></li>
+        <li role="presentation"><a href="#">Users</a></li>
       </ul>
-      <p appBasisHighlight>This is basis Highlight Directive</p>
-      <p appRendererDirective>This is Renderer Highlight Directive</p>
-      <p appHostListenerDirective>This is Renderer HostListener Directive</p>
-      <p appHostBindingDirective>This is Host Binding Directive</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>
